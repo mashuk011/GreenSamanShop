@@ -1,0 +1,211 @@
+
+
+/*  ___________________________
+ Our Header comp css code
+ ____________________- */
+
+ .header-comp{
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    padding: 2rem 1.87rem;
+
+ }
+
+ .header-flex-bx{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+
+ .left-header-logo{
+    position: relative;
+    width: 15rem;
+ }
+
+ .left-header-logo img{
+    width: 100%;
+    height: auto;
+ }
+
+ .center-header-search-bx{
+    position: relative;
+    width: 65rem;
+    height: 4.5rem;
+    background-color: #fff;
+    border: .1rem solid #ddd;
+ }
+
+ .center-header-search-bx input{
+    width: 100%;
+    height: 100%;
+    font-size: 1.45rem;
+    font-weight: 500;
+    letter-spacing: .5px;
+    background-color: transparent;
+    border: none;
+    padding-inline: 4rem;
+ }
+
+ .center-header-search-bx ion-icon{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: .65rem;
+    font-size: 2.23rem;
+    color: #8e8b8b;
+
+ }
+
+ .center-header-search-bx input::placeholder{
+    font-size: 1.6rem;
+    font-weight: 400;
+    font-style: italic;
+    color: #8e8b8b;
+ }
+
+ .right-header-cart-wish-acnt-flex-bx{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+ }
+
+ .swtch-page-btn{
+    position: relative;
+    background-color: transparent;
+    border: none;
+ }
+
+ .swtch-page-btn ion-icon{
+    position: relative;
+    font-size: 2.5rem;
+ }
+
+ .num-bx{
+    position: absolute;
+    top: -.55rem;
+    right: -1rem;
+    width: 1.76rem;
+    height: 1.76rem;
+    display: grid;
+    place-items: center;
+    padding: 0 .2rem;
+    background-color: #088178;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1rem;
+ }
+
+ .header-comp2{
+    position: relative;
+    width: 100%;
+    padding: 1.87rem 1.87rem;
+ }
+
+ .left-categ-filt-bx{
+    position: relative;
+    width: 20rem;
+ }
+
+ .categ-filt-btn{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    background-color: #fff;
+    border: none;
+    font-size: 1.67rem;
+    font-weight: 600;
+    color: #4b4b4b;
+    
+ }
+
+ .categ-filt-btn i{
+    font-size: 2rem;
+    color: #595858;
+ }
+
+ .center-navabr , .navbar , .nav , .nav-lists{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+ }
+
+ .nav-lists {
+    gap: 3.35rem;
+ }
+
+ 
+ .nav-lists li {
+    position: relative;
+    width: max-content;
+ }
+
+ 
+ .nav-lists li a{
+    position: relative !important;
+    display: inline-block !important;
+    width: max-content !important;
+    font-size: 1.55rem !important;
+    font-weight: 600 !important;
+    color: #3d3d3d !important;
+    letter-spacing: .55px !important;
+ }
+
+ .header-left-box{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 7rem;
+ }
+
+ .header-left-box2{
+    gap: 12rem;
+ }
+
+ .help-num-bx{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: max-content;
+    gap: 1.3rem;
+ }
+
+ .help-num-bx ion-icon{
+    font-size: 2.23rem;
+    color: #3d3d3d;
+ }
+
+ .help-num-bx p{
+    margin-bottom: 0;
+    font-size: 1.87rem;
+    font-weight: 500;
+    letter-spacing: .45px;
+    color: #3d3c3c;
+ }
+
+ .help-num-bx p span{
+    display: inline-block;
+    margin-left: .5rem;
+    font-size: 1.87rem;
+    font-weight: 600;
+    color: #088178;
+ }
+
+ .nav-lis , .nav-links{
+    transition: 500ms ease;
+ }
+
+
+
+ .nav-lis.nlinkactive .nav-links{
+    color: #088178 !important;
+ }
