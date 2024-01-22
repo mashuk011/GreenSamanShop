@@ -12,6 +12,7 @@ import TopDeal from '../Components/TopDeal'
 import Newsletter from '../Components/Newsletter'
 import Impact from '../Components/Impact'
 import Footer from '../Components/Footer'
+import DealsDayComp from '../Components/DealsDayComp'
 
 const Home = () => {
   return (
@@ -24,6 +25,7 @@ const Home = () => {
       <ProdCateg />
       <BannerComp />
       <NewArrivl />
+      <DealsDayComp/>
       <MonthlySell />
       <Blog />
       <TopDeal />
