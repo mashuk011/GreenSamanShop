@@ -8,12 +8,17 @@ import BannerComp from '../Components/BannerComp'
 import NewArrivl from '../Components/NewArrivl'
 import MonthlySell from '../Components/MonthlySell'
 import Blog from '../Components/Blog'
+import TopDeal from '../Components/TopDeal'
+import Newsletter from '../Components/Newsletter'
+import Impact from '../Components/Impact'
+import Footer from '../Components/Footer'
 
 const Home = () => {
   return (
     <>
       <HomeSlider />
       <Feature />
+      <Impact />
       <ProdFilterComp />
       <ServBanner />
       <ProdCateg />
@@ -21,6 +26,9 @@ const Home = () => {
       <NewArrivl />
       <MonthlySell />
       <Blog />
+      <TopDeal />
+      <Newsletter />
+      <Footer />
     </>
   )
 }
