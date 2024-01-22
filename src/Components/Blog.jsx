@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import "../Styles/CategCss.css";
 import "../Styles/ProdFilt.css";
 import '../Styles/HomeSlide.css'
-import '../Styles/BlogCSS.css'
+import '../Styles/BlogCss.css'
 import BlogDet from '../JsonData/BlogData';
 import { NavLink } from 'react-router-dom';
 
