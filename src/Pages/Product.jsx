@@ -97,7 +97,7 @@ const Product = () => {
                   <div className="star-bx">
                     <Star className="star-bx-r" star={singleProdData.rating} />
                   </div>
-                  <p className="review-bx">
+                  <p className="review-bx review-bx2">
                     ({singleProdData.review} reviews){" "}
                   </p>
                 </div>

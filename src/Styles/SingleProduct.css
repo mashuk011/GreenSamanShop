@@ -251,7 +251,7 @@
     flex-direction: column;
    }
 
-   .review-bx{
+   .review-bx2{
     position: relative;
     width: 100%;
     display: flex;
@@ -446,7 +446,7 @@
     font-weight: 500;
    }
 
-   .review-bx:last-child{
+   .review-bx2:last-child{
     border-bottom: none;
    }
 

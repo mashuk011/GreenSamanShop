@@ -1,8 +1,18 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import ProdItem from './ProdItem';
+import { ShopContext } from '../Context';
+import ProductDetPopup from './ProductDetPopup';
 
 const RelatedProd = ({relatedProdData}) => {
-    
+  const {AllProdData} = useContext(ShopContext);
+  const [selectedProduct , setSelectedProduct] = useState(null) ;
+  const handleViewClick = (productId) => {
+
+    // console.log(productId);
+
+    const selectedValue =  AllProdData.find((elem,id) => elem.id === productId);
+    setSelectedProduct(selectedValue);
+}
   return (
     <>
 
@@ -27,6 +37,8 @@ const RelatedProd = ({relatedProdData}) => {
            tagname={curElem.tag}
            percent={curElem.percent}
            tagType={curElem.tagtype}
+           onClickOpen={() => handleViewClick(curElem.id)}
+
             />
             
             </>
@@ -35,6 +47,9 @@ const RelatedProd = ({relatedProdData}) => {
         
     </div>
     </div>
+
+    {selectedProduct  && <ProductDetPopup productData={selectedProduct}  onClose={() => setSelectedProduct(null)} />  }
+
     </>
   )
 }

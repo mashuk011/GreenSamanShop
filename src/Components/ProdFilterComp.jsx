@@ -14,6 +14,11 @@ const ProdFilterComp = () => {
     <section className="prod-filter-comp">
         <div className="common-container">
 
+        <div className="categ-flex-bx comn-heading mb-5">
+            <p>A curated collection of our best selling items</p>
+            <h6> <span>Best</span>  Sellers</h6>
+          </div>
+
             <div className="prod-filter-flex-main-bx">
 
                 <div className="left-prod-filt-btns-flex">

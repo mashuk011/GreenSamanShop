@@ -14,11 +14,15 @@ const AllProdData = [
         tag : "New",
         tagtype : true,
         review : 25,
+        categ : "jackets",
+        collor : "red",
         singleprodImg : [
             "/images/prod-front-img-1.jpg",
             "/images/prod-back-img-1.jpg",
             
         ],
+
+        prodTag : 'men',
 
         relatedProd : [
 
@@ -97,6 +101,10 @@ const AllProdData = [
             "/images/prod-back-img-2.jpg",
             
         ],
+
+        categ : "shoes",
+        collor : "blue",
+        prodTag : 'women',
 
         relatedProd : [
 
@@ -184,6 +192,9 @@ const AllProdData = [
             
         ],
 
+        categ : "trousers",
+        collor : "red",
+        prodTag : 'dress',
 
         relatedProd : [
 
@@ -269,6 +280,10 @@ const AllProdData = [
             "/images/prod-back-img-4.jpg",
             
         ],
+        categ : "jeans",
+        collor : "pink",
+        prodTag : 'women',
+
 
         relatedProd : [
 
@@ -358,6 +373,9 @@ const AllProdData = [
             "/images/prod-back-img-5.jpg",
             
         ],
+        categ : "jeans",
+        collor : "yellow",
+        prodTag : 'kids',
 
         relatedProd : [
 
@@ -452,7 +470,9 @@ const AllProdData = [
             "/images/prod-back-img-6.jpg",
             
         ],
-
+        categ : "trousers",
+        collor : "yellow",
+        prodTag : 'men',
 
         relatedProd : [
 
@@ -543,6 +563,10 @@ const AllProdData = [
             
         ],
 
+        categ : "accessories",
+        collor : "white",
+        prodTag : 'dress',
+
         relatedProd : [
 
             {
@@ -624,6 +648,10 @@ const AllProdData = [
             "/images/prod-back-img-8.jpg",
             
         ],
+
+        categ : "accessories",
+        collor : "red",
+        prodTag : 'women',
 
         relatedProd : [
 
@@ -708,6 +736,10 @@ const AllProdData = [
             
         ],
 
+        categ : "jeans",
+        collor : "orange",
+        prodTag : 'kids',
+
         relatedProd : [
 
           
@@ -789,6 +821,10 @@ const AllProdData = [
             
         ],
 
+        categ : "shoes",
+        collor : "orange",
+        prodTag : 'dress',
+
         relatedProd : [
 
             {
@@ -865,6 +901,10 @@ const AllProdData = [
             "/images/prod-back-img-11.jpg",
             
         ],
+
+        categ : "jackets",
+        collor : "green",
+        prodTag : 'men',
 
         
         relatedProd : [
@@ -949,6 +989,10 @@ const AllProdData = [
             
         ],
 
+        categ : "trousers",
+        collor : "blue",
+        prodTag : 'men',
+
         relatedProd : [
 
                  
@@ -1032,6 +1076,10 @@ const AllProdData = [
             
         ],
 
+        categ : "jackets",
+        collor : "green",
+        prodTag : 'women',
+
         relatedProd : [
 
                  
@@ -1110,6 +1158,10 @@ const AllProdData = [
             "/images/prod-back-img-14.jpg",
             
         ],
+
+        categ : "accessories",
+        collor : "orange",
+        prodTag : 'kids',
 
         relatedProd : [
 
@@ -1192,6 +1244,10 @@ const AllProdData = [
             "/images/prod-back-img-15.jpg",
             
         ],
+
+        categ : "jeans",
+        collor : "pink",
+        prodTag : 'kids',
 
         relatedProd : [
 

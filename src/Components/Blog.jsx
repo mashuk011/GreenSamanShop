@@ -20,7 +20,7 @@ const Blog = () => {
 
                 <div className="left-blog-grid-det-bx">
 
-                <div className="categ-flex-bx comn-heading categ-flex-bx3">
+                <div className="categ-flex-bx comn-heading blog-heading categ-flex-bx3">
             <h6>
               {" "}
               <span>From</span> Blog

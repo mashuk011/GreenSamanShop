@@ -76,9 +76,13 @@ const NewArrivl = () => {
       <section className="new-arrvl-comp">
         <div className="common-container">
           <div className="categ-flex-bx">
+          <div className="categ-flex-bx comn-heading mb-5">
+            <p>A curated collection of our best selling items</p>
             <h6>
+              {" "}
               <span>New</span> Arrivals
             </h6>
+          </div>
           </div>
 
           <div className="categ-slider-main-bx">

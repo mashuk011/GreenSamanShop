@@ -167,6 +167,17 @@
     background-color: transparent;
   }
   
+  .comn-heading{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .blog-heading{
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+  }
 
 
 
