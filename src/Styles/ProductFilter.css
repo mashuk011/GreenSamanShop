@@ -1,0 +1,95 @@
+
+/*____________________________________
+ Our Product Filter CSS code 
+ ---------------------- */
+
+ .product-filter-comp{
+    position: relative;
+    width: 100%;
+    margin-top: 3rem;
+    padding: 2rem 1.87rem;
+ }
+
+ .product-filt-grid{
+    position: relative;
+    width: 100%;
+    grid-template-columns: .87fr 3fr ;
+    column-gap: 2.5rem;
+    row-gap: 2.5rem;
+ }
+
+ .left-product-filter-section{
+    position: relative;
+    width: 100%;
+ }
+
+ .right-product-filter-section{
+    position: relative;
+    width: 100%;
+ }
+
+ .top-showing-prod-filter-main-bx-flex{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+
+ .top-showing-prod-filter-main-bx-flex h6{
+    font-size: 2rem;
+    margin-bottom: 0;
+    font-weight: 500;
+    letter-spacing: .45px;
+ }
+
+ .top-showing-prod-filter-main-bx-flex h6 span{
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    color: #088178;
+ }
+
+ .right-filter-btns-flex-bx{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+ }
+
+ .layout-btn{
+    position: relative;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: #f4f9f4;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: .1rem solid #ddd;
+    font-size: 1.5rem;
+    border-radius: .4rem;
+    color: #4f5d77;
+ }
+ 
+ .filter-select-bx{
+    position: relative;
+    width: 16rem;
+    height: 3.5rem;
+    background-color: #f4f9f4;
+    border: .1rem solid #ddd;
+    padding-inline: 1rem;
+    border-radius: .4rem;
+ }
+
+ .filter-select-bx select{
+    width: 100%;
+    height: 100%;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #4f5d77;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+ }

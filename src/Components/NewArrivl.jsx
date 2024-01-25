@@ -1,11 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import NewArrvlData from "../JsonData/NewArrvl";
 import "../Styles/ProdFilt.css";
 import "../Styles/CategCss.css";
 import ProdItem from "./ProdItem";
+import { ShopContext } from "../Context";
+import ProductDetPopup from "./ProductDetPopup";
 
 const NewArrivl = () => {
   const [arrvlData, setArrvlData] = useState(NewArrvlData);
+  const {AllProdData} = useContext(ShopContext);
+  const [selectedProduct , setSelectedProduct] = useState(null) ;
 
   useEffect(() => {
     const servSlider = document.querySelectorAll(".arrivl-slider");
@@ -59,6 +63,13 @@ const NewArrivl = () => {
     }
   }, []);
   
+  const handleViewClick = (productId) => {
+
+    // console.log(productId);
+
+    const selectedValue =  AllProdData.find((elem,id) => elem.id === productId);
+    setSelectedProduct(selectedValue);
+}
 
   return (
     <>
@@ -78,7 +89,7 @@ const NewArrivl = () => {
                     <>
                       <div className="slider-items slider-items2">
                         <ProdItem
-                          key={curElem.id}
+                          id={curElem.id}
                           frontImg={curElem.prodFront}
                           backImg={curElem.prodBack}
                           prodName={curElem.prodName}
@@ -88,6 +99,8 @@ const NewArrivl = () => {
                           tagname={curElem.tag}
                           percent={curElem.percent}
                           tagType={curElem.tagtype}
+              onClickOpen={() => handleViewClick(curElem.id)}
+                          
                         />
                       </div>
                     </>
@@ -109,6 +122,9 @@ const NewArrivl = () => {
           </div>
         </div>
       </section>
+
+      {selectedProduct  && <ProductDetPopup productData={selectedProduct}  onClose={() => setSelectedProduct(null)} />  }
+
 
     </>
   );

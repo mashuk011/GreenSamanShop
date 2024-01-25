@@ -1,19 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Star from './Star'
+// import { ShopContext } from '../Context';
+// import ProductDetPopup from './ProductDetPopup';
+import { NavLink } from 'react-router-dom';
 
 const ProdItem = (props) => {
+    // const {AllProdData} = useContext(ShopContext);
+    // const [selectedProduct , setSelectedProduct] = useState(null) ;
+
+    // const handleViewClick = (productId) => {
+
+    //     // console.log(productId);
+
+    //     const selectedValue =  AllProdData.find((elem,id) => elem.id === productId);
+    //     setSelectedProduct(selectedValue);
+    // }
+    
   return (
     <>
 
-    <div className="prod-item-bx" >
+    <div className="prod-item-bx" key={props.id}>
         <div className="prod-img-bx">
+        <NavLink to={`/product/${props.id}`} onClick={ () => window.scrollY(0,0)}>
             <div className="prod-img prod-img-1">
                 <img src={props.frontImg} alt="" />
             </div>
             <div className="prod-img prod-img-2">
                 <img src={props.backImg} alt="" />
             </div>
-
+            </NavLink>
            { props.tagType === true ? 
              <div className={ props.tagname == "New" ? " newtag " : props.tagname == "Sale" ? "saletag" : "hottag" }>
                 <span> {props.tagname} </span>
@@ -23,7 +38,7 @@ const ProdItem = (props) => {
 
                 <div className="prod-btn-bx">
                     <span>Quick View</span>
-                    <button className="prod-quick-btn">
+                    <button className="prod-quick-btn" onClick={props.onClickOpen}>
                     <ion-icon name="eye-outline"></ion-icon>
                     </button>
                 </div>
@@ -48,7 +63,7 @@ const ProdItem = (props) => {
             
             
         </div>
-
+       
         <div className="prod-info-bx">
 
             <span> {props.prodTitle} </span>
@@ -68,6 +83,9 @@ const ProdItem = (props) => {
         </div>
         
     </div>
+
+
+    {/* {selectedProduct && <ProductDetPopup productData={selectedProduct} starData={props.rating}  onClose={() => setSelectedProduct(null)} />  } */}
       
     </>
   )

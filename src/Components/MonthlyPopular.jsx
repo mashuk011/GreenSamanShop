@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import PopularProdData from "../JsonData/PopularProd";
 import ProdItemTwo from "./ProdItemTwo";
+import ProductDetPopup from './ProductDetPopup';
+import { ShopContext } from '../Context';
 
 const MonthlyPopular = () => {
-
+  const {AllProdData} = useContext(ShopContext);
+  const [selectedProduct , setSelectedProduct] = useState(null) ;
 
     useEffect(() => {
       const servSlider = document.querySelectorAll(".populr-slider");
@@ -56,6 +59,15 @@ const MonthlyPopular = () => {
         sliderInit(servSlider[i]);
       }
     }, []);
+
+    
+  const handleViewClick = (productId) => {
+
+    // console.log(productId);
+
+    const selectedValue =  AllProdData.find((elem,id) => elem.id === productId);
+    setSelectedProduct(selectedValue);
+}
     
   return (
     <>
@@ -67,7 +79,7 @@ const MonthlyPopular = () => {
                     return (
                         <>
                             <div className="slider-items slider-items2 slider-items3">
-                        <ProdItemTwo key={curElem.id}
+                        <ProdItemTwo id={curElem.id}
                           frontImg={curElem.prodFront}
                           backImg={curElem.prodBack}
                           prodName={curElem.prodName}
@@ -77,6 +89,8 @@ const MonthlyPopular = () => {
                           tagname={curElem.tag}
                           percent={curElem.percent}
                           tagType={curElem.tagtype} 
+                          onClickOpen={() => handleViewClick(curElem.id)}
+
                           />
                           </div>
                         
@@ -96,6 +110,10 @@ const MonthlyPopular = () => {
                 
                 </div>
             </div> 
+
+
+            {selectedProduct  && <ProductDetPopup productData={selectedProduct}  onClose={() => setSelectedProduct(null)} />  }
+
     </>
   )
 }

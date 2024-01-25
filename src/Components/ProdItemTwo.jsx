@@ -1,16 +1,26 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import Star from './Star'
-const ProdItemTwo = (props) => {
+import { NavLink } from 'react-router-dom'
+
+
+const ProdItemTwo = (props ) => {
+    // const {AllProdData} = useContext(ShopContext);
+    // const [selectedProduct , setSelectedProduct] = useState(null) ;
+  
+    
+    
   return (
     <>
          <div className="prod-item-bx prod-item-bx2" >
         <div className="prod-img-bx prod-img-bx2">
+         <NavLink to={`/product/${props.id}`} onClick={ () => window.scrollY(0,0)}>
             <div className="prod-img prod-img-1">
                 <img src={props.frontImg} alt="" />
             </div>
             <div className="prod-img prod-img-2">
                 <img src={props.backImg} alt="" />
             </div>
+            </NavLink>
 
            { props.tagType === true ? 
              <div className={ props.tagname == "New" ? " newtag " : props.tagname == "Sale" ? "saletag" : "hottag" }>
@@ -21,7 +31,7 @@ const ProdItemTwo = (props) => {
 
                 <div className="prod-btn-bx prod-btn-bx4 prod-btn-bx-text1">
                     <span>Quick View</span>
-                    <button className="prod-quick-btn prod-quick-btn2">
+                    <button className="prod-quick-btn prod-quick-btn2" onClick={props.onClickOpen}>
                     <ion-icon name="eye-outline"></ion-icon>
                     </button>
                 </div>
@@ -46,7 +56,7 @@ const ProdItemTwo = (props) => {
             
             
         </div>
-
+       
         <div className="prod-info-bx prod-info-bx2">
 
             <span> {props.prodTitle} </span>
@@ -65,7 +75,11 @@ const ProdItemTwo = (props) => {
             
         </div>
         
+
     </div>
+
+
+    
     </>
   )
 }

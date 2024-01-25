@@ -20,7 +20,7 @@ const DealsDayComp = () => {
         setSec(Math.floor((time/1000)%60)) ;
 
 
-        console.log(days);
+        // console.log(days);
         
     }
 

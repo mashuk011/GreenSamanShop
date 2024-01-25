@@ -9,9 +9,9 @@ import NewArrivl from '../Components/NewArrivl'
 import MonthlySell from '../Components/MonthlySell'
 import Blog from '../Components/Blog'
 import TopDeal from '../Components/TopDeal'
-import Newsletter from '../Components/Newsletter'
+// import Newsletter from '../Components/Newsletter'
 import Impact from '../Components/Impact'
-import Footer from '../Components/Footer'
+// import Footer from '../Components/Footer'
 import DealsDayComp from '../Components/DealsDayComp'
 
 const Home = () => {
@@ -29,8 +29,7 @@ const Home = () => {
       <MonthlySell />
       <Blog />
       <TopDeal />
-      <Newsletter />
-      <Footer />
+     
     </>
   )
 }

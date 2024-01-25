@@ -1,10 +1,14 @@
-import React,{ useEffect, useState } from 'react'
+import React,{ useContext, useEffect, useState } from 'react'
 import featureProd from '../JsonData/FeatureProd';
 import ProdItemTwo from './ProdItemTwo';
-
+import { ShopContext } from '../Context';
+import ProductDetPopup from './ProductDetPopup';
 const MonthlyFeatured = () => {
     const [featProd , setFeatProd] = useState(featureProd);
-
+    const {AllProdData} = useContext(ShopContext);
+    const [selectedProduct , setSelectedProduct] = useState(null) ;
+    
+ 
     
 
     useEffect(() => {
@@ -58,6 +62,20 @@ const MonthlyFeatured = () => {
         sliderInit(servSlider[i]);
       }
     }, []);
+
+  // const handleViewClick = (getnum) => {
+
+  //   console.log(getnum);
+    
+  // }
+
+  const handleViewClick = (productId) => {
+
+    // console.log(productId);
+
+    const selectedValue =  AllProdData.find((elem,id) => elem.id === productId);
+    setSelectedProduct(selectedValue);
+}
     
   return (
     <>
@@ -69,7 +87,7 @@ const MonthlyFeatured = () => {
                     return (
                         <>
                             <div className="slider-items slider-items2 slider-items3">
-                        <ProdItemTwo key={curElem.id}
+                        <ProdItemTwo id={curElem.id}
                           frontImg={curElem.prodFront}
                           backImg={curElem.prodBack}
                           prodName={curElem.prodName}
@@ -79,6 +97,7 @@ const MonthlyFeatured = () => {
                           tagname={curElem.tag}
                           percent={curElem.percent}
                           tagType={curElem.tagtype} 
+                          onClickOpen={() => handleViewClick(curElem.id)}
                           />
                           </div>
                         
@@ -98,6 +117,10 @@ const MonthlyFeatured = () => {
                 
                 </div>
             </div>
+
+            {selectedProduct  && <ProductDetPopup productData={selectedProduct}  onClose={() => setSelectedProduct(null)} />  }
+
+            
     </>
   )
 }

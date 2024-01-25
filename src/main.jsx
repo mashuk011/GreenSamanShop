@@ -5,9 +5,12 @@ import './index.css'
 
 // Importing the Bootstrap 5 CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ShopContextProvider from './Context.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
+  <ShopContextProvider>
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
+  </React.StrictMode>
+  </ShopContextProvider>,
 )

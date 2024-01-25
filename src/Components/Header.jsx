@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import '../Styles/Header.css'
 import { NavLink } from 'react-router-dom'
+import LoginComp from './LoginComp';
 
 const Header = () => {
   const [navActive , setNavActive] = useState(1);
+  const [loginPopup , setLoginPopup] = useState(false);
   return (
     <>
       <section className="header-comp">
@@ -69,7 +71,7 @@ const Header = () => {
                   <div className="nav-lists">
                     <li className={navActive == 1 ? 'nav-lis nlinkactive' : 'nav-lis'} onClick={() => setNavActive('1')}> <NavLink to="#" className="nav-links">Home</NavLink> </li>
                     <li className={navActive == 2 ? 'nav-lis nlinkactive' : 'nav-lis'} onClick={() => setNavActive('2')}> <NavLink to="#" className="nav-links">About</NavLink> </li>
-                    <li className={navActive == 3 ? 'nav-lis nlinkactive' : 'nav-lis'} onClick={() => setNavActive('3')}> <NavLink to="#" className="nav-links">Shop</NavLink> </li>
+                    <li className={navActive == 3 ? 'nav-lis nlinkactive' : 'nav-lis'} onClick={() => setNavActive('3')}> <NavLink to="/shop" className="nav-links">Shop</NavLink> </li>
                     <li className={navActive == 4 ? 'nav-lis nlinkactive' : 'nav-lis'} onClick={() => setNavActive('4')}> <NavLink to="#" className="nav-links">Blog</NavLink> </li>
                     <li className={navActive == 5 ? 'nav-lis nlinkactive' : 'nav-lis'} onClick={() => setNavActive('5')}> <NavLink to="#" className="nav-links">Gallery</NavLink> </li>
                     <li className={navActive == 6 ? 'nav-lis nlinkactive' : 'nav-lis'} onClick={() => setNavActive('6')}> <NavLink to="#" className="nav-links">My Account</NavLink> </li>
@@ -81,15 +83,21 @@ const Header = () => {
             </div>
             </div>
 
-            <div className="help-num-bx">
+            {/* <div className="help-num-bx">
             <ion-icon name="headset-outline"></ion-icon>
             <p>Hotline <span> 1900 - 888 </span></p>
-            </div>
+            </div> */}
+
+            <button className="login-btn" onClick={() => setLoginPopup(true)}>
+              Login
+            </button>
             
           </div>
           
         </div>
       </header>
+
+     {loginPopup === true ?  <LoginComp onClickClose={() => setLoginPopup(false)} /> : null}  
       
     </>
   )

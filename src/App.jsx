@@ -11,6 +11,8 @@ import Account from './Pages/Account'
 import TopHeader from './Components/TopHeader'
 import Header from './Components/Header'
 import Product from './Pages/Product'
+import Footer from './Components/Footer'
+import Newsletter from './Components/Newsletter'
 
 function App() {
 
@@ -34,6 +36,8 @@ function App() {
 
         
       </Routes>
+      <Newsletter />
+      <Footer />
       </BrowserRouter>
     </>
   )
