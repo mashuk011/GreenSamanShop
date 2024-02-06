@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import Star from './Star'
 // import { ShopContext } from '../Context';
 // import ProductDetPopup from './ProductDetPopup';
 import { NavLink } from 'react-router-dom';
+import { ShopContext } from '../Context';
 
 const ProdItem = (props) => {
-    // const {AllProdData} = useContext(ShopContext);
+    const {addToCart ,  addToWishList} = useContext(ShopContext);
     // const [selectedProduct , setSelectedProduct] = useState(null) ;
 
     // const handleViewClick = (productId) => {
@@ -46,7 +47,7 @@ const ProdItem = (props) => {
                 
                 <div className="prod-btn-bx prod-btn-bx2">
                     <span>Add To Wishlist</span>
-                    <button className="prod-quick-btn">
+                    <button className="prod-quick-btn" onClick={() => {addToWishList(props.curentProd)}}>
                     <ion-icon name="heart-outline"></ion-icon>
                     </button>
                 </div>
@@ -54,7 +55,7 @@ const ProdItem = (props) => {
                 
                 <div className="prod-btn-bx prod-btn-bx3">
                     <span>Add To Cart</span>
-                    <button className="prod-quick-btn">
+                    <button className="prod-quick-btn" onClick={() => {addToCart(props.id)}}>
                     <ion-icon name="bag-outline"></ion-icon>
                     </button>
                 </div>

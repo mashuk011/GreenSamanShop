@@ -1,15 +1,17 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Star from "./Star";
 import { IoWalletOutline } from "react-icons/io5";
 import { FaArrowsRotate } from "react-icons/fa6";
 import { FiAnchor } from "react-icons/fi";
 import "../Styles/ProductPopup.css";
 import { NavLink } from "react-router-dom";
+import { ShopContext } from "../Context";
 
 const ProductDetPopup = ({ productData , onClose }) => {
   const [clor, setClor] = useState();
   const [size, setSize] = useState();
   const [quantity, setQuantity] = useState(1)
+   const {addToCart , addToWishList } = useContext(ShopContext);
 
 
   const handleColor = (valueCol) => {
@@ -184,15 +186,15 @@ const ProductDetPopup = ({ productData , onClose }) => {
               <div className="cart-btn-wishlist-btn-flex-bx">
 
                 <NavLink to='#'>
-                  <button className="cart-btn">
+                  <button className="cart-btn" onClick={() => {addToCart(productData.id)}}>
                   <ion-icon name="bag-outline"></ion-icon>
                     Add To Cart
                   </button>
                 </NavLink>
-
-                <button className="wishlist-btn">
+{/* onClick={() => {addToWishList(productData.curentProd)}} */}
+                {/* <button className="wishlist-btn" >
                 <ion-icon name="heart-outline"></ion-icon>
-                </button>
+                </button> */}
                 
               </div>
 

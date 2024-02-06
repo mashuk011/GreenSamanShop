@@ -17,7 +17,7 @@ const Product = () => {
   const [size, setSize] = useState();
   const [quantity, setQuantity] = useState(1);
   const [descRev, setDescRev] = useState("Description");
-  const { AllProdData } = useContext(ShopContext);
+  const { AllProdData , addToCart } = useContext(ShopContext);
   const { id } = useParams();
   const singleProdData = AllProdData.find((e) => e.id === Number(id));
 
@@ -265,15 +265,15 @@ const Product = () => {
 
                 <div className="cart-btn-wishlist-btn-flex-bx">
                   <NavLink to="#">
-                    <button className="cart-btn">
+                    <button className="cart-btn" onClick={() => {addToCart(singleProdData.id)}}> 
                       <ion-icon name="bag-outline"></ion-icon>
                       Add To Cart
                     </button>
                   </NavLink>
 
-                  <button className="wishlist-btn">
+                  {/* <button className="wishlist-btn" onClick={() => {addToWishList(singleProdData.curentProd)}}>
                     <ion-icon name="heart-outline"></ion-icon>
-                  </button>
+                  </button> */}
                 </div>
 
                 <div className="prod-spec-det-bx">

@@ -80,6 +80,7 @@ const MonthlyPopular = () => {
                         <>
                             <div className="slider-items slider-items2 slider-items3">
                         <ProdItemTwo id={curElem.id}
+                         curentProd={curElem}
                           frontImg={curElem.prodFront}
                           backImg={curElem.prodBack}
                           prodName={curElem.prodName}

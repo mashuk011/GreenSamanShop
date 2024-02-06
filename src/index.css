@@ -179,6 +179,48 @@
     text-align: left;
   }
 
+  .nav-w-c-u-btns , .nav-logo{
+    display: none;
+  }
+
+  .header-comp2.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    animation: stickyNav .78s ease forwards;
+    transform: translateY(-50%);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  @keyframes stickyNav {
+
+    0%{
+      transform: translateY(-50%);
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    100%{
+      transform: translateY(0%);
+      opacity: 1;
+      visibility: visible;
+    }
+    
+  }
+
+  .header-comp2.sticky .nav-w-c-u-btns , 
+  .header-comp2.sticky .nav-logo{
+    display: flex;
+  }
+
+  .header-comp2.sticky .categ-filt-btn , 
+  .header-comp2.sticky .login-btn{
+    display: none;
+  }
 
 
  
