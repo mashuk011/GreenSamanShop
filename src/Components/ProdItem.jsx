@@ -22,7 +22,7 @@ const ProdItem = (props) => {
 
     <div className="prod-item-bx" key={props.id}>
         <div className="prod-img-bx">
-        <NavLink to={`/product/${props.id}`} onClick={ () => window.scrollY(0,0)}>
+        <NavLink to={`/product/${props.id}`} >
             <div className="prod-img prod-img-1">
                 <img src={props.frontImg} alt="" />
             </div>

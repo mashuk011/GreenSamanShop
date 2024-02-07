@@ -30,7 +30,7 @@ const Header = () => {
             <div className="header-left-box header-left-box2">
 
             <div className="left-header-logo">
-              <img src="/images/nav-logo.svg" alt="" />
+              <img src="/images/TGSS-logo.png" alt="" />
             </div>
 
             <div className="center-header-search-bx">

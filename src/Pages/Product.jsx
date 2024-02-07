@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { ShopContext } from "../Context";
 import { NavLink, useParams } from "react-router-dom";
 import "../Styles/ProductPopup.css";
@@ -20,6 +20,10 @@ const Product = () => {
   const { AllProdData , addToCart } = useContext(ShopContext);
   const { id } = useParams();
   const singleProdData = AllProdData.find((e) => e.id === Number(id));
+
+  useEffect(() => {
+     window.scroll(0,0)
+  }, [])
 
   const handleSetImg = (getImgPath) => {
     setActiveImg(getImgPath);
